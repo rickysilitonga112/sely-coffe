@@ -32,6 +32,24 @@
     <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/owl.carousel.css" />
     <link rel="stylesheet" href="css/main.css" />
+
+    <style>
+      /* CSS for the responsive map */
+      .map-responsive {
+        overflow: hidden;
+        position: relative;
+        height: 0;
+        padding-bottom: 75%; /* Adjust this value to set the aspect ratio (height/width) of the map */
+      }
+
+      .map-responsive iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
   </head>
   <body>
     <header id="header" id="home">
@@ -46,7 +64,8 @@
             <ul class="nav-menu">
               <li class="menu-active"><a href="#home">Home</a></li>
               <li><a href="#about">About</a></li>
-              <li><a href="#coffee">Coffee</a></li>
+              <li><a href="#coffee">Menu</a></li>
+              <li><a href="#order">Order</a></li>
               <li><a class="about-us" href="#footer-area">About Us</a></li>
             </ul>
           </nav>
@@ -70,6 +89,12 @@
               Start your day with <br />
               a sip of coffee
             </h1>
+
+            <a
+              href="whatsapp://send?phone=+6282178853689&text=Hello,%20how%20to%20make%20an%20order%20in%20kopikita?"
+              class="primary-btn text-uppercase"
+              >Order Now</a
+            >
           </div>
         </div>
       </div>
@@ -201,6 +226,85 @@
       </div>
     </section>
     <!-- End menu Area -->
+
+    <!-- Start order Area -->
+    <section class="order-area section-gap" id="order">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="menu-content pb-60 col-lg-10">
+            <div class="title text-center">
+              <h1 class="mb-10">Order Anywhere</h1>
+              <p>
+                You can order your favorite menu of Kopi Kita from anywhere.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <form class="col-md-6">
+            <div class="mb-2">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="name" />
+            </div>
+
+            <div class="mb-2">
+              <label for="address" class="form-label">Address</label>
+              <input type="text" class="form-control" id="address" />
+            </div>
+
+            <div class="mb-2">
+              <label for="selectOption">Choose Your Favorite Coffee</label>
+              <select class="form-control" id="selectOption">
+                <option value="">Your favorite menu</option>
+                <option value="option1">Cappuccino</option>
+                <option value="option2">Americano</option>
+                <option value="option3">Espresso</option>
+                <option value="option3">Macchiato</option>
+                <option value="option3">Mocha</option>
+                <option value="option3">Coffe Latte</option>
+              </select>
+            </div>
+
+            <div class="mb-2">
+              <label for="specialRequest" class="form-label"
+                >Your Special Request</label
+              >
+              <textarea
+                class="form-control"
+                id="specialRequest"
+                rows="3"
+                placeholder="Special request"
+              ></textarea>
+            </div>
+
+            <!-- Order Button -->
+            <div class="order-button d-flex justify-content-center mt-5">
+              <a href="#" class="primary-btn text-uppercase">Order Now</a>
+            </div>
+          </form>
+
+          <!-- Map Section -->
+          <div class="col-md-6">
+            <!-- You can embed your map here -->
+            <!-- Replace the placeholder with your map embed code or implementation -->
+            <div style="width: 100%; height: 400px; background-color: #f5f5f5">
+              <!-- Placeholder for the map -->
+              <div class="map-responsive">
+                <iframe
+                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Batam"
+                  width="600"
+                  height="508"
+                  frameborder="0"
+                  style="border: 0; width: 100%"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End review Area -->
 
     <!-- Start gallery Area -->
     <section class="gallery-area section-gap" id="gallery">
